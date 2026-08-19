@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Globe, ArrowUpRight, Activity } from "lucide-react";
 import { CONTENT, type Locale } from "@/data/content";
+import { Logo } from "@/components/ui/Logo";
 
 interface HeaderProps {
   locale: Locale;
@@ -68,22 +69,13 @@ export const Header: React.FC<HeaderProps> = ({ locale }) => {
         }`}
       >
         <div className="editorial-container flex items-center justify-between">
-          {/* Brand Logo with Glowing Medical Badge */}
+          {/* Official Brand Logo */}
           <Link
             href={`/${locale}`}
-            className="flex items-center gap-3 group focus:outline-none rounded-lg p-1"
+            className="flex items-center group focus:outline-none rounded-lg transition-transform duration-300 hover:opacity-95"
+            aria-label="Gulf M Reference Home"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-blue to-brand-cyan flex items-center justify-center text-white shadow-md shadow-brand-blue/30 group-hover:scale-105 transition-transform duration-300">
-              <Activity className="w-5 h-5 animate-pulse" />
-            </div>
-            <div>
-              <span className="text-base sm:text-lg font-black tracking-[0.14em] text-slate-900 block leading-none">
-                GULF M REFERENCE
-              </span>
-              <span className="text-[9px] font-bold tracking-widest text-brand-blue uppercase mt-0.5 block">
-                Healthcare Solutions
-              </span>
-            </div>
+            <Logo variant="color" />
           </Link>
 
           {/* Desktop Frosted Glass Capsule Nav */}

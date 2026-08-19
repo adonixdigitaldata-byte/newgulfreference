@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowUpRight, Phone, Mail, MapPin } from "lucide-react";
 import { CONTENT, type Locale } from "@/data/content";
+import { Logo } from "@/components/ui/Logo";
 
 interface FooterProps {
   locale: Locale;
@@ -28,11 +29,8 @@ export const Footer: React.FC<FooterProps> = ({ locale }) => {
           {/* Brand Column */}
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
-              <div className="flex items-center gap-2.5 mb-4">
-                <span className="w-2.5 h-2.5 rounded-full bg-brand-blue-light" />
-                <span className="text-base font-bold uppercase tracking-[0.2em] text-white">
-                  GULF M REFERENCE
-                </span>
+              <div className="mb-4">
+                <Logo variant="white" />
               </div>
               <p className="text-sm text-white/80 max-w-md leading-relaxed">
                 {tFooter.description}
