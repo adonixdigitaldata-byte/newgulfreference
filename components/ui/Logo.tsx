@@ -111,7 +111,6 @@ export const Logo: React.FC<LogoProps> = ({
   const isWhite = variant === "white";
   const primaryColor = isWhite ? "#FFFFFF" : "#0A65D9";
   const secondaryColor = isWhite ? "rgba(255,255,255,0.9)" : "#0284C7";
-  const taglineColor = isWhite ? "rgba(255,255,255,0.75)" : "#0A65D9";
 
   return (
     <div className={`inline-flex items-center gap-3 ${className}`}>

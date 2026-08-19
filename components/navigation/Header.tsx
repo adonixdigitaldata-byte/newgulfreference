@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Globe, ArrowUpRight, Activity } from "lucide-react";
+import { Menu, X, Globe, ArrowUpRight } from "lucide-react";
 import { CONTENT, type Locale } from "@/data/content";
 import { Logo } from "@/components/ui/Logo";
 
